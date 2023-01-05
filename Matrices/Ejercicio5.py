@@ -15,10 +15,9 @@ def transpuesta(A):
     B = np.transpose(m)
     print(m)
     print(B)
-    for i in m:
-        for j in m:
-            if m[i][j]==B[i][j]:
-                print ("simetrica")
-            else:
-                print("No es simetrica")
+    if np.array_equal(m,B) == True:
+        print("Son transpuestas ¡¡¡")
+    else:
+        print("No son transpuestas :( ")
+        
 transpuesta(A)
